@@ -1,5 +1,16 @@
 # tznn
 
+![Platform](https://img.shields.io/badge/platform-cross--platform-lightgray.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPI version](https://img.shields.io/pypi/v/tznn.svg)](https://pypi.org/project/tznn/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/tznn.svg)](https://pypi.org/project/tznn/)
+[![CI](https://github.com/chuongmep/tznn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/chuongmep/tznn/actions)
+[![Publish](https://github.com/chuongmep/tznn/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/chuongmep/tznn/actions)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/tznn.svg?color=blue&label=Downloads)](https://pypi.org/project/tznn/)
+[![HitCount](https://hits.dwyl.com/chuongmep/tznn.svg?style=flat-square)](http://hits.dwyl.com/chuongmep/tznn)
+<a href="https://twitter.com/intent/follow?screen_name=chuongmep">
+<img src="https://img.shields.io/twitter/follow/chuongmep?style=social&logo=twitter" alt="follow on Twitter"></a>
+
 Tiny helper for IANA time zones and abbreviations.
 
 This package provides a small utility class backed by a static mapping in `timezone.json` to:
@@ -104,4 +115,3 @@ The tests validate:
 - https://docs.python.org/3/library/zoneinfo.html
 - https://github.com/python/tzdata/issues/111
 - https://discuss.python.org/t/get-local-time-zone/4169/10
-- 
