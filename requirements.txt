@@ -1,0 +1,4 @@
+# Runtime dependency for Windows to provide IANA tz database
+ tzdata ; platform_system == "Windows"
+# Dev-only
+pytest>=7
