@@ -131,3 +131,5 @@ The tests validate:
 - https://docs.python.org/3/library/zoneinfo.html
 - https://github.com/python/tzdata/issues/111
 - https://discuss.python.org/t/get-local-time-zone/4169/10
+- https://www.iana.org/time-zones
+- https://data.iana.org/time-zones/releases/
