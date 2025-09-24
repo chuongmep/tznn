@@ -98,3 +98,10 @@ The tests validate:
 - Utilities for DST-aware conversions and current time by zone.
 
 
+## Knowledge
+- https://adamj.eu/tech/2021/05/06/how-to-list-all-timezones-in-python/
+- https://stackoverflow.com/questions/78580391/zoneinfo-is-missing-timezone-names-that-pytz-has
+- https://docs.python.org/3/library/zoneinfo.html
+- https://github.com/python/tzdata/issues/111
+- https://discuss.python.org/t/get-local-time-zone/4169/10
+- 

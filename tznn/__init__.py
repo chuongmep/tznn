@@ -1,7 +1,6 @@
 from __future__ import annotations
 import json
-from datetime import datetime, timezone
-import sys
+from importlib.resources import files
 
 __all__ = ["tznn"]
 __version__ = "0.1.0"
@@ -15,30 +14,22 @@ class tznn:
     - get_abbr(tz_name: str) -> str: Get the abbreviation (e.g., EDT) for the given time zone name.
     - get_all_available_time_zones() -> dict[str, str]: Get a dict of all available IANA time zone names and their abbreviations.
     """
+
     def __init__(self):
-        # Preload available time zones and abbreviations
-        tz_abbreviations = {}
-        # read from json timezone.json
-        with open("timezone.json", "r", encoding="utf-8") as f:
+        # Load bundled timezone mapping from package data
+        tz_path = files(__package__).joinpath("timezone.json")
+        with tz_path.open("r", encoding="utf-8") as f:
             tz_abbreviations = json.load(f)
         self.tz_abbreviations = tz_abbreviations
-        
+
     def get_all_available_time_zones(self) -> dict[str, str]:
-        """Return a dict of all available IANA time zone names and their abbreviations.
-
-        Uses the system/installed tzdata. On Windows, you may need the 'tzdata' package.
-        """
-        
+        """Return a dict of all available IANA time zone names and their abbreviations."""
         return self.tz_abbreviations
-    def get_available_time_zones(self) -> list[str]:
-        """Return a sorted list of available IANA time zone names.
 
-        Uses the system/installed tzdata. On Windows, you may need the 'tzdata' package.
-        """
-        
+    def get_available_time_zones(self) -> list[str]:
+        """Return a sorted list of available IANA time zone names."""
         return sorted(self.tz_abbreviations.keys())
 
-    
     def get_abbr(self, tz_name: str) -> str:
         """Return the time zone abbreviation for the given IANA time zone name.
 
@@ -51,5 +42,4 @@ class tznn:
         """
         if tz_name not in self.tz_abbreviations:
             raise ValueError(f"Invalid time zone name: {tz_name}")
-        # get value from dict
         return self.tz_abbreviations[tz_name]
