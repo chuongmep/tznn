@@ -22,7 +22,23 @@ Notes:
 - Abbreviations are static values from `timezone.json` and are not date-aware (no DST transitions).
 - On Windows, `tzdata` is listed as a dependency in case you choose to extend functionality using IANA tzdata; the current implementation only reads `timezone.json` and does not require system tzdata at runtime.
 
-## Install
+## Install (online via PyPI)
+
+Install the latest published version from PyPI:
+
+```powershell
+pip install tznn
+```
+
+Upgrade to the newest version:
+
+```powershell
+pip install -U tznn
+```
+
+Note: On Windows, `tzdata` will be installed automatically as a dependency when needed.
+
+## Install from source
 
 From the project root:
 
