@@ -29,5 +29,8 @@ Homepage = "https://example.com/tznn"
 Issues = "https://example.com/tznn/issues"
 
 [tool.setuptools]
-# single-module package
-py-modules = ["tznn"]
+packages = ["tznn"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"tznn" = ["timezone.json"]
